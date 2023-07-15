@@ -8,7 +8,7 @@ Siga as instruções abaixo para configurar o ambiente de desenvolvimento em sua
 
 ### Pré-requisitos
 
-- Compilador C++ (como o g++)
+- Compilador C++ (como o g++) | _ou minGW no windos_
 - CMake
 - Git
 
