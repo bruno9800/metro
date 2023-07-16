@@ -17,6 +17,7 @@ class Graph {
           const TABLE mapDistanceStraight, const TABLE_L mapLines)
         : mapRealDistance(mapRealDistance),
           mapDistanceStraight(mapDistanceStraight),
+          mapLines(mapLines),
           numVertices(numVertices) {}
 
     double getDistanceStraightDistance(int origem, int destino) const {
@@ -27,6 +28,8 @@ class Graph {
     double getRealDistance(int origem, int destino) const {
         return mapRealDistance[origem][destino];
     }
+
+    int getLine(int x, int y) const { return this->mapLines[x][y]; }
 
     size_t getNumVertices() const { return this->numVertices; }
 };

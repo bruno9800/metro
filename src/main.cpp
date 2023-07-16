@@ -10,7 +10,7 @@ int main() {
     for (const auto& par : estacoes.getVizinhos()) {
         std::cout << "(" << par.first << ", " << par.second << ")";
         std::cout << " = " << metro.getRealDistance(par.first, par.second)
-                  << '\n';
+                  << '/' << metro.getLine(par.first, par.second) << '\n';
     }
 
     return 0;
@@ -30,3 +30,10 @@ int main() {
 
  *
  */
+
+/*
+    FORMULA DO PESO DA VIAGEM
+
+    distancia / 3
+    if(mudança de linha ) += 4;
+*/
