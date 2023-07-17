@@ -1,24 +1,7 @@
-#include "include/a-stars.hpp"
-#include "include/graph.hpp"
-#include "include/header.hpp"
+#include "include/display.hpp"
 
-int main()
-{
-    Graph metro(14, T_D_REAL, T_D_RETA, T_L);
-    AStars estacoes(metro);
-
-    std::cout << "distancia: " << estacoes.run(E13, E9) << '\n';
-    for (const auto &par : estacoes.getVizinhos())
-    {
-        std::cout << "(" << par.first << ", " << par.second << ")";
-        std::cout << " = " << metro.getRealDistance(par.first, par.second)
-                  << '/' << metro.getLine(par.first, par.second) << '\n';
-    }
-
-    for (const auto &est : estacoes.getCaminhos())
-    {
-        std::cout << est << ' ';
-    }
+int main() {
+    display();
 
     return 0;
 }

@@ -20,7 +20,7 @@ class Graph {
           mapLines(mapLines),
           numVertices(numVertices) {}
 
-    double getDistanceStraightDistance(int origem, int destino) const {
+    double getDistanceStraight(int origem, int destino) const {
         double distance = mapDistanceStraight[origem][destino];
         return distance != 0 ? distance : mapDistanceStraight[destino][origem];
     }
